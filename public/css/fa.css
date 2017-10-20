@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/IRANSans4/eot/IRANSansWeb.eot');
+    src: url('../fonts/IRANSans4/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+    url('../fonts/IRANSans4/woff2/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/IRANSans4/woff/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/IRANSans4/ttf/IRANSansWeb.ttf') format('truetype');
+}
+
+.locale {
+    direction: rtl;
+    font-family: IRANSans !important;
+}
+.locale-text {
+    font-family: IRANSans !important;
+}
+
+.locale-dir {
+    direction: rtl;
+}
+
+.locale-align {
+    text-align: right;
+}
+
+.ltr {
+    direction: ltr !important;
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    margin-left: 0;
+    margin-right: -20px;
+}
+.radio label, .checkbox label {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+th {
+    text-align: right;
+}
+
+.multiselect, .multiselect__option{
+    text-align: right;
+}
+.multiselect__tags {
+    float: right;
+    width: 100%;
+}
+.multiselect__tag {
+    margin-right: 0px;
+    margin-left: 10px;
+    float: right;
+}
+

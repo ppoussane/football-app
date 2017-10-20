@@ -71,7 +71,7 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">{{ __('words.login') }}</a>
                         <a href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    {{ __('words.login') }}
                 </div>
 
                 <div class="links">
