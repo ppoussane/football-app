@@ -13,9 +13,14 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
+        'App\Events\NewPostCreated' => [
+            'App\Listeners\CallAdminOnCreatePost',
+            'App\Listeners\PublishNewPost',
         ],
+
+        'App\Events\PostUpdated' => [
+            'App\Listener\PostUpdated'
+        ]
     ];
 
     /**
