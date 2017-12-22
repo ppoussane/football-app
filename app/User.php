@@ -36,4 +36,14 @@ class User extends Authenticatable
     {
         return $query->where('admin', true);
     }
+
+    public function liked_posts()
+    {
+        return $this->belongsToMany(Post::class, 'likes', 'post_id', 'user_id')->withTimestamps();
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

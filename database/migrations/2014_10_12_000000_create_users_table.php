@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->boolean('admin')->default(0);
+            $table->boolean('admin')->default(1);
             $table->string('telegram_id')->nullable()->default(null);
             $table->rememberToken();
             $table->timestamps();

@@ -18,8 +18,12 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\PublishNewPost',
         ],
 
+        'App\Events\PostDeleted' => [
+            'App\Listeners\ListenPostDeleted'
+        ],
+
         'App\Events\PostUpdated' => [
-            'App\Listener\PostUpdated'
+            'App\Listeners\PostUpdated'
         ]
     ];
 

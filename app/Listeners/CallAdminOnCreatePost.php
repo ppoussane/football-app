@@ -28,6 +28,10 @@ class CallAdminOnCreatePost
     public function handle($event)
     {
         $users = User::admin()->get();
-        $users->notify(new NewPostPublished($event->post));
+        $users->each->notify(new NewPostPublished($event->post));
+
+//        $users->each(function($user) use ($event) {
+//           $user->notify(new NewPostPublished($event->post));
+//        });
     }
 }

@@ -55,10 +55,12 @@ class NewPostPublished extends Notification
      * @param  mixed  $notifiable
      * @return array
      */
-    public function toArray($notifiable)
+    public function toDatabase($notifiable)
     {
         return [
-            'post' => $this->post->id,
+            'post_id' => $this->post->id,
+            'post' => $this->post,
+            'user' => auth()->user()
         ];
     }
 }

@@ -25,6 +25,12 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('update-post', function ($user, $post) {
+            return $user->id == $post->creator_id;
+        });
+
+        Gate::define('delete-post', function ($user, $post) {
+            return $user->id == $post->creator_id;
+        });
     }
 }
